@@ -9,7 +9,7 @@ jobs:
 
       - run:
           name: Greeting
-          command:|
+          command: |
             ENV BUILD_PACKAGES bash curl-dev
             echo Hello, world.
       - run:
