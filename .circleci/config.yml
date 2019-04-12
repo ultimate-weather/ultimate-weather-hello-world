@@ -2,15 +2,16 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: alpine:3.5
 
     steps:
       - checkout
 
       - run:
           name: Greeting
-          command: echo Hello, world.
-
+          command:|
+            ENV BUILD_PACKAGES bash curl-dev
+            echo Hello, world.
       - run:
           name: Print the Current Time
           command: date
