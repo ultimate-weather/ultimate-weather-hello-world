@@ -10,7 +10,7 @@ jobs:
       - run:
           name: Greeting
           command: |
-            ENV BUILD_PACKAGES bash curl-dev
+            apk add bash curl-dev
             echo Hello, world.
       - run:
           name: Print the Current Time
